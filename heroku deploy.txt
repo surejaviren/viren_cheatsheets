@@ -1,0 +1,36 @@
+DEPLOY HEROKU APP.
+
+Install Heroku ,To deploy our app , do this is Command line
+npm install -g heroku
+
+----------------------------------------------------------------
+We need to show Heroku what to do so create a Procfile 
+setup Procfile
+add this line if using nodemon and save
+web: nodemon app.js
+
+|| or ||
+
+1. open package.json
+2. under scripts write 
+3. "start": "node <main_file_name(of javascript or other)>"
+-----------------------------------------------------------------
+
+Now we need to create git repo. and just commit it
+[git init]
+[git add .]
+[git commit -m "first commit"]
+
+{Create a Heroku Login with email} --> {in chrome}
+
+enter this in Terminal 
+[heroku login]
+
+To create a heroku project
+[heroku create]
+
+To publish to heroku
+[git push heroku master]
+
+To see your app logs live
+[heroku logs -t]

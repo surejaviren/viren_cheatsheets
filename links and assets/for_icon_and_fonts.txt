@@ -1,0 +1,3 @@
+###### awesome font and icons ######
+
+<script src="https://kit.fontawesome.com/ed8ff1edbd.js" crossorigin="anonymous"></script>

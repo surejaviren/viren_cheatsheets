@@ -1,0 +1,7 @@
+
+-->go to this website
+https://uigradients.com
+
+--> then go to css in the navbar
+--> then copy code and paste it.
+--> and alter the color as per our need.

@@ -1,0 +1,18 @@
+what is babel?
+--> it is one of the lib which is use to convert modern js to older one...
+--> get referenced from learned by net ninja
+
+
+what is webpack?
+--> webpack is also a library
+-->webpack is a module bundler. Its main purpose is to bundle JavaScript files for     usage in a browser, yet it is also capable of transforming, bundling, or 	   packaging just about any resource or asset.
+
+what is passport || passport-local || passport-local-mongoose ?
+-->Passport's sole purpose is to authenticate requests
+
+what is body-parser?
+--> Yes we can work without body-parser. When you don't use that you get the raw     request, and your body and headers are not in the root object of request     parameter . You will have to individually manipulate all the fields.
+
+    Or you can use body-parser, as the express team is maintaining it .
+
+    What body-parser can do for you: It simplifies the request.

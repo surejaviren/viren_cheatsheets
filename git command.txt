@@ -1,0 +1,35 @@
+// setup name and email for very first time when initialize the repo
+git config --global user.name "<username>"
+git config --global user.email "<user@email.com>"
+
+
+// for making new repo
+echo "# hackapp" >> README.md
+
+
+1. git init
+2. git add .(or file_name.ext)
+3. git commit -m "(message)"
+4. git remote add origin __Link__
+5. git push origin master
+6. git remote rm origin
+
+
+// for ignoring any file
+1. touch .gitignore
+2. git add .gitignore
+3. (after getting into the .gitignore write like node_modules/ <-- and nodemodules    will be ignored.)
+
+
+// general commands
+1. git status (to watch changes and file we are left to add.)
+2. git log (details of the commit done by different users)
+3. git checkout <commit_id> (here paste the commit id which can be get from the git 	   log command) 
+--> if written [git checkout .] will shift to the previous commit
+--> also [git checkout master] will shift to the fresh commit
+--> git reset --hard <first five digit of the commit id>
+4. git revert --no-commit <commit_id>..HEAD (this will go back to the previous    changes)
+   [caution: it does not delete it still remains but main part is to commit    carefully]
+5. git reset 
+6. [rm -rf .git] to delete .git file
+

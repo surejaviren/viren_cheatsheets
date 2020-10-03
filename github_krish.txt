@@ -1,0 +1,72 @@
+
+Create Repo
+git init
+
+Clone a Repo
+git clone "url"
+
+Create .gitignore
+touch .gitignore
+for templates :github.com/github/gitignore
+
+Config 
+git config --global user.name "yourname"
+
+git config --global user.email "youremail"
+
+These are useful to set email and name
+
+Cool 
+git config --global color.ui auto
+
+Branching
+git branch new_branch
+To create a new branch
+
+Switch branch
+git switch branch_name
+git checkout branch_name
+
+Now 
+git merge branch
+Combines the specified branch’s history into the
+current branch. This is usually done in pull requests,
+but is an important Git operation.
+
+git branch -d branch_name
+Delete a branch
+
+Github controls
+
+git fetch
+Downloads all history from the remote tracking branches
+
+git merge
+Combines remote tracking branch into current local branch
+
+git push origin master
+To push to a master branch
+
+git push
+Uploads all local branch commits to GitHub
+
+git pull
+Updates your current local working branch with all new
+commits from the corresponding remote branch on GitHub.
+ "git pull" is a combination of "git fetch" and "git merge"
+
+Make changes
+Browse and inspect the evolution of project files
+git diff [first_branch]...[second_branch]
+
+Shows content differences between two branches
+git log --follow [file]
+
+Lists version history for a file, including renames
+
+git log
+Lists version history for the current branch
+ 
+
+
+

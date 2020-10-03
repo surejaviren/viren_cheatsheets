@@ -1,0 +1,17 @@
+follow below steps for deploying website on firebase:
+1. name main or home html file as index.html
+2. place all the thing in public folder
+3. In the cmd using npm type "npm install -g firebase-tools"
+4. in terminal (open with outside public folder but with the main named folder)
+5. firebase login (log with your email logged in firebase)
+6. now go to firebase console
+	1. new Project
+	2. Give it a name and continue
+7. now the place where you have stored your public folder in the command prompt
+	1.firebase init
+	2.Select what you want (prefferably hosting using spacebar)
+	3.Select an existing project
+	4.caution: dont overwrite the index.html or if you have 404.html dont 	           overwrite that too.
+	5.caution: even if it asks to write everything as single web app answer with 		   it no.
+	6.after the completion of the step use command "firebase deploy".
+

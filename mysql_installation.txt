@@ -1,0 +1,17 @@
+################### initial phase ###################
+
+1.install workbench Mysql or phpmyadmin from the desired browser.
+2.now if the workbench is selected for the purpose.
+	--> free tutorial from the mosh (it's enough to get started.)
+		link: https://www.youtube.com/watch?v=7S_tz1z_5bA
+	--> for CRUD operation (this is enough)
+		link: https://www.youtube.com/watch?v=4fWWn2Pe2Mk
+	--> fastest way (learn basic from the mosh and rest syntax from the w3school)
+		link: https://www.w3schools.com/sql/default.asp
+
+3. also whenever install workbench Mysql never forget to add users.
+4.while RE-installing again remove the data from every corner of the windows.
+
+
+
+caution: dont connect everytime connection with the databases. (while working on the backend part of the web or sites.)

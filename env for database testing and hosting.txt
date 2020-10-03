@@ -1,0 +1,23 @@
+Q1. we want to check our app is working fine or not frequently
+--> so better option is to check using local db.
+===
+ans
+===
+1. type [export <any name of variable>=<link of the db to connect>]
+2. connect db with that variable name
+
+
+Q2. we want to go for production 
+--> so better option is to go with online db hosting
+===
+ans
+===
+1. here go to the heroku console go to current app
+2. go to its setting
+3. go to reveal config vars
+4. add key = <variable_name> && value = <db_url_where_we_have_hosted>
+
+
+-------------------------------------------
+and atlast add this line to the code
+var url = process.env.DATABASEURL || "mongodb://localhost/<db_name>"

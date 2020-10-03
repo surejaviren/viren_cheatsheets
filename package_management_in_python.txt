@@ -1,0 +1,39 @@
+=========================
+virtual environment setup
+=========================
+
+----->why we use this concept?
+ans: we use to download and install lib or python packages in the particular individual project folder.
+
+
+steps:
+    1. install virtualenv
+        [pip install virtualenv]
+    2. type this command for the folder you want..
+        [virtualenv <directory_name>]
+    2. (better) 
+        python -m venv <directory_name>
+    3. activate the Scripts for virtual environment.
+        [<directory_name>/Scripts/activate]
+
+    ---You should see the name of your virtual environment in brackets on your terminal      line e.g. (mypython).
+
+    4. after finishing work deactivate
+        [deactivate]
+
+=========================
+creating requirements.txt
+=========================
+
+----->why we use it?
+ans: we use this to list down all the package name with the versions so that if we share this project with someone can install all the dependencies at one command
+
+steps:
+    1. install from someones project shared to you
+        [pip install -r requirements.txt]
+    2. [pip freeze > requirements.txt] 
+        {note: can use many times as it will replace the previous one}
+        {caution: use this command after setting up virtual environment and installing certain packages.}
+    3. to uninstall the packages 
+	[pip uninstall -r requirements.txt] -- deletes one by one
+	[pip uninstall -r requirements.txt -y] -- delete all
