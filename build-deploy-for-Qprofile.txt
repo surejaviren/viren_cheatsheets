@@ -1,0 +1,8 @@
+pre-part
+generate ssh key in gitpod: ssh-keygen -t rsa -b 2048 -C "virensureja3@gmail.com"
+
+
+1. npm start {to start}
+2. npm run-script build {This builds static files to run your profile app in production, which we will soon upload}
+3. netlify deploy --dir=public --prod {Provide inputs as needed. This uploads your files to netlify and provides a link to your webpage.}
+4. python3 helper.py --update BACKEND_INTEGRATION {update what we are doing}

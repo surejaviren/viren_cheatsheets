@@ -1,3 +1,6 @@
+// note: <> brackets are used just to show precise location where u have to paste the links/names specified
+	dont include them in real scenario.
+
 // setup name and email for very first time when initialize the repo
 git config --global user.name "<username>"
 git config --global user.email "<user@email.com>"
@@ -5,31 +8,87 @@ git config --global user.email "<user@email.com>"
 
 // for making new repo
 echo "# hackapp" >> README.md
+   recommended: (make new repo in github and use http link to setup in local device
+		although ssh way is there but it is cumbersome :(  )
 
+// setup commands (beginner friendly ;) )
+1. git init	(initailize git in current folder/directory)
+2. git add <.> or <file_name.extension> (to add unstage or untracked file to staged section)
+   warning: there is "or" (here . will add all the unstage or untracked files and specific filename will add just single file)
+3. git commit -m "<message>" (commit the change -m flag is use to allow us write mssg)
+   suggestion: write relavent mssg so that when u analyze in past u can come to know about the changes u have made
+4. git remote add origin <paste_link_from_http_github_repo> (this will connect local machine/device folder/directory to github(remote server) repo)
+5. git push origin master (push changes/commits made locally to remote server in our case github)
+6. git remote -rm origin (to remove the current origin in brief to disconnect our git from github)
 
-1. git init
-2. git add .(or file_name.ext)
-3. git commit -m "(message)"
-4. git remote add origin __Link__
-5. git push origin master
-6. git remote rm origin
+// for cloning existing repo
+1. git clone "<paste_url_here>" 
+   (is how you get a local copy of an existing repository to work on. It's usually only used once for a given repository, unless you want to have multiple working copies of it around. (Or want to get a clean copy after messing up your local one...)
+   warning: 1 time command at very beginning
+
+// for updating local working branch from remote server(github)
+1. git pull (Updates your current local working branch with all new commits from the corresponding remote branch on GitHub)
+   tip: "git pull" is a combination of "git fetch" and "git merge" 
+   suggestion: generally used when u are working in team.
+2. git fetch (Downloads all history from the remote tracking branches)
+3. git merge (Combines remote tracking branch into current local branch)
 
 
 // for ignoring any file
 1. touch .gitignore
 2. git add .gitignore
 3. (after getting into the .gitignore write like node_modules/ <-- and nodemodules    will be ignored.)
+4. for templates :github.com/github/gitignore (search more on google)
 
+// view/analysis commands (generally used after some commits/commit)
+1. git status (to watch changes/modifications and file we are left to add untracked files.)
+   {red} shows unstaged file
+   {green} shows staged file
+   if u r using git-lense or vscode :
+	m: modified
+	u: untracked
+	d: deleted
+2. git log (details of the commits done by different users and much more..)
+3. git status -s 
+   (here left side column shows staging section and right side shows working directory.)
+
+// branch commands
+1. git branch <new_branch_name> (creates new branch)
+2. git switch <branch_name> (jumps to specified branch from current branch)
+   git checkout <branch_name>
+3. git merge <branch_name> (Combines the specified branch’s history into the current branch. This is usually done in pull requests)
+4. git branch -d <branch_name> (Delete a branch)
+5. git log --follow <file> (Shows content differences between two branches)
+6. git diff <first_branch>...<second_branch> (Browse and inspect the evolution of project files)
+
+// undo-mistake commands
+1. git restore <file_name> (restore the file from the staged section to unstagging area)
+   detailed description: https://www.git-tower.com/learn/git/commands/git-restore/
+2. git rm --cached -r <directory_name>/ (this will remove the directory from staging section)
+3. to delete specific commit (needed utmost when commit of credential file is done but not pushed)
+	a. git log (type command in cmd in working directory and then find the target_commit u want to delete by scrolling)
+	b. find the commit just below the target_commit and copy the first 7 chars of the key
+	c. git rebase -i <seven_char_of_commit_below_the_target_commit>
+	d. editor will open which is vim editor so don't try to use windows command there :).
+	e. now go in front of the target_commit and press "i" to get into insert mode
+	f. replace pick with drop (infront of target_commit ofc.)
+	h. press esc to get out of insert mode
+	i. :wq and then enter (type :wq to save and exit)
+	j. cross-check with git log.
+4. git reset <name of the file> (this will take out the undesired file from the staged changes to unstagged)
 
 // general commands
-1. git status (to watch changes and file we are left to add.)
-2. git log (details of the commit done by different users)
-3. git checkout <commit_id> (here paste the commit id which can be get from the git 	   log command) 
---> if written [git checkout .] will shift to the previous commit
---> also [git checkout master] will shift to the fresh commit
---> git reset --hard <first five digit of the commit id>
-4. git revert --no-commit <commit_id>..HEAD (this will go back to the previous    changes)
-   [caution: it does not delete it still remains but main part is to commit    carefully]
-5. git reset 
+1. ls -a (to see every hidden file in directory)
+2. git config --global core.autocrlf true (to avoid clash in /r and /n between the mac and windows users)
+   --> cr means carriage return (\r)
+   --> lf means line feed (\n)
+3. git config --global diff.tool vscode (set vscode as default diff tool)
+4. mv prev_name new_name ( to rename any file)
+5. git checkout <commit_id> (here paste the commit id which can be get from the git log command) 
+   suggestion: if written [git checkout .] will shift to the previous commit
+   	       also [git checkout master] will shift to the fresh commit
 6. [rm -rf .git] to delete .git file
+   warning: will lose all progress/track
 
+
+credits: krish, shiva, you-tube(telusko, mosh-cheatsheet), stackoverflow
